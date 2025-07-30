@@ -12,11 +12,11 @@ settings = dotenv_values(find_dotenv(".env"))
 TG_BOT_TOKEN = str(settings.get("TG_BOT_TOKEN"))
 AI_MODEL = str(settings.get("AI_MODEL"))
 AI_URL = settings.get("AI_URL")
-AI_API = settings.get("AI_API")
+AI_TOKEN = settings.get("AI_TOKEN")
 
 client = openai.OpenAI(
     base_url=AI_URL,
-    api_key=AI_API,
+    api_key=AI_TOKEN,
 )
 
 
